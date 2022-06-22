@@ -1,0 +1,14 @@
+.product-characteristics {
+  display: grid;
+  padding: 0 0 31px;
+  background-color: $background-secondary-color;
+}
+
+.product-characteristics__button {
+  justify-self: center;
+  padding-right: 18px;
+  padding-left: 18px;
+  margin: 34px 0 0;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}

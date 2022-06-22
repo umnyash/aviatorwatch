@@ -1,0 +1,42 @@
+.gift-experience__item {
+  display: grid;
+  background-color: $gift-experience-background-color;
+}
+
+.gift-experience__item-content {
+  z-index: 2;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  padding: 44px 37px 282px 41px;
+  text-align: center;
+}
+
+.gift-experience__item-content p {
+  margin: 0 0 14px;
+}
+
+.gift-experience__heading {
+  margin: 0 0 13px;
+}
+
+.gift-experience__link {
+  padding-right: 34px;
+  padding-left: 34px;
+  margin: 0 0 23px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.gift-experience__pagination {
+  position: static;
+}
+
+.gift-experience__img-wrapper {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  align-self: end;
+}
+
+.gift-experience__img {
+  vertical-align: middle;
+}

@@ -1,0 +1,68 @@
+.night-view {
+  padding: 44px 0 0;
+  text-align: center;
+  color: $secondary-text-color;
+  background-color: $night-view-background-color;
+}
+
+.night-view__heading {
+  position: relative;
+  padding: 0 30px;
+  margin: 0 0 44px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -32px;
+    width: 24px;
+    height: 19px;
+    background-color: $night-view-accent-color;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 19'%3E%3Cpolygon points='0,0 24,0 12,19'/%3E%3C/svg%3E");
+    transform: translateX(-50%);
+  }
+}
+
+.night-view__accent {
+  color: $night-view-accent-color;
+}
+
+.night-view__content {
+  width: 300px;
+  padding: 14px 20px 14px 20px;
+  border: 1px solid $night-view-accent-color;
+  margin: 0 auto 23px;
+}
+
+.night-view__content-item {
+  margin: 0 0 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.night-view__text {
+  margin: 0;
+  text-transform: uppercase;
+  color: $night-view-accent-color;
+}
+
+
+.night-view__key {
+  display: inline;
+  text-transform: uppercase;
+
+  &::after {
+    content: "\A0//\A0";
+  }
+}
+
+.night-view__value {
+  display: inline;
+  color: $night-view-accent-color;
+}
+
+.night-view__image {
+  vertical-align: middle;
+}
