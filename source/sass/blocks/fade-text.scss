@@ -1,5 +1,5 @@
 .fade-text--lessen .fade-text__inner {
-  height: 8.2em;
+  max-height: 8.2em;
   color: transparent;
   background-image: linear-gradient(to top, transparent, #000 2em, #000);
   -webkit-background-clip: text;
@@ -11,7 +11,6 @@
   margin: 0 0 16px;
 }
 
-
 .fade-text__inner p {
   margin: 0 0 10px;
 
@@ -22,7 +21,7 @@
 
 .fade-text__button {
   position: relative;
-  padding: 0;
+  padding: 0 26px 0 0;
   border: none;
   font-family: $basic-font-family;
   font-size: 18px;
@@ -33,9 +32,13 @@
     content: "";
     position: absolute;
     top: 12px;
-    right: -20px;
+    right: 6px;
     width: 7px;
     height: 6px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6'%3E%3Cpolygon points='0,0 3.5,6 7,0'/%3E%3C/svg%3E");
   }
+}
+
+.fade-text__button--less::after {
+  transform: rotate(180deg);
 }

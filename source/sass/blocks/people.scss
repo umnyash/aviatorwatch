@@ -1,0 +1,81 @@
+.people {
+  text-align: center;
+  background-color: $secondary-text-color;
+}
+
+.people__heading {
+  padding: 40px 30px;
+  margin: 0;
+}
+
+.people__item {
+  display: grid;
+}
+
+.people__content {
+  order: 2;
+  max-width: 470px;
+  padding: 55px 30px 52px 30px;
+  margin: 0 auto;
+
+  @media #{$narrow-tablet} {
+    padding-top: 211px;
+    padding-bottom: 102px;
+  }
+}
+
+.people__name {
+  margin: 0 0 4px;
+}
+
+.people__post {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.people__text {
+  margin: 0 0 13px;
+
+  @media #{$narrow-tablet} {
+    margin-bottom: 32px;
+  }
+}
+
+.people__text--decorated{
+  position: relative;
+  padding: 34px 0 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 31px;
+    height: 22px;
+    background-image: url("../img/quotes.svg");
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+  }
+}
+
+.people__link {
+  padding-right: 32px;
+  padding-left: 32px;
+  margin: 0 0 37px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+
+  @media #{$narrow-tablet} {
+    margin-bottom: 141px;
+  }
+}
+
+.people__img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.people .people__pagination {
+  bottom: 18px;
+}

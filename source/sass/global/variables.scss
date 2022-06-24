@@ -1,14 +1,21 @@
+// Viewports
+
+$wide-mobile: "(min-width: 361px) and (max-width: 666px)";
+$narrow-tablet: "(min-width: 666px) and (max-width: 767px)";
+
 // Fonts
 
 $basic-font-family: "proximanovaregular", sans-serif;
 $additional-font-family: "proximanovabold", sans-serif;
 $secondary-font-family: "proximasoftregular", sans-serif;
+$accent-font-family: "proximasoftsemibold", sans-serif;
 
 // Colors
 
 $background-secondary-color: #cecece;
 $night-view-background-color: #000000;
 $night-view-accent-color: #70f7e4;
+$text-color: #000000;
 $secondary-text-color: #ffffff;
 $swiper-bullets-color: #000000;
 $gift-experience-background-color: #cfd5da;

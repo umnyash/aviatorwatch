@@ -3,12 +3,17 @@
   text-align: center;
   color: $secondary-text-color;
   background-color: $night-view-background-color;
+
+  @media #{$narrow-tablet} {
+    padding-top: 50px;
+  }
 }
 
 .night-view__heading {
   position: relative;
+  max-width: 410px;
   padding: 0 30px;
-  margin: 0 0 44px;
+  margin: 0 auto 44px;
 
   &::after {
     content: "";
@@ -32,6 +37,11 @@
   padding: 14px 20px 14px 20px;
   border: 1px solid $night-view-accent-color;
   margin: 0 auto 23px;
+
+  @media #{$narrow-tablet} {
+    width: 390px;
+    margin-bottom: 35px;
+  }
 }
 
 .night-view__content-item {
@@ -63,6 +73,8 @@
   color: $night-view-accent-color;
 }
 
-.night-view__image {
+.night-view__img {
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }

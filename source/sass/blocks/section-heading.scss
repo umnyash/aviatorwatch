@@ -4,8 +4,20 @@
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0.05em;
+
+  &--center {
+    text-align: center;
+  }
 }
 
-.section-heading--center {
-  text-align: center;
+.section-heading__part {
+  display: block;
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 19.5px;
+  letter-spacing: 0;
+
+  @media #{$narrow-tablet} {
+    margin-bottom: 6px;
+  }
 }

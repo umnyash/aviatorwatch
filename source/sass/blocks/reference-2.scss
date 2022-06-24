@@ -1,14 +1,33 @@
-.reference-2__item-content {
-  padding: 73px 30px 19px 30px;
+.reference-2 {
   text-align: center;
+  background-color: $secondary-text-color;
+}
+
+.reference-2__item-content {
+  max-width: 450px;
+  padding: 73px 30px 19px 30px;
+  margin: 0 auto;
+
+  @media #{$narrow-tablet} {
+    padding-top: 187px;
+    padding-bottom: 150px;
+  }
 }
 
 .reference-2__heading {
   margin: 0 0 13px;
+
+  @media #{$narrow-tablet} {
+    margin-bottom: 20px;
+  }
 }
 
 .reference-2__item p {
   margin: 0 0 13px;
+
+  @media #{$narrow-tablet} {
+    margin-bottom: 37px;
+  }
 }
 
 .reference-2__link {
@@ -17,6 +36,12 @@
   margin: 0 0 37px;
   font-size: 14px;
   letter-spacing: 0.05em;
+
+  @media #{$narrow-tablet} {
+    padding-right: 39px;
+    padding-left: 39px;
+    margin-bottom: 87px;
+  }
 }
 
 .reference-2__pagination {
@@ -25,4 +50,6 @@
 
 .reference-2__img {
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
