@@ -1,6 +1,10 @@
 .reference {
   display: grid;
-  background-color: $reference-background-color;
+  background-color: #bbcedd;
+
+  @media (min-width: $tablet-width) {
+    background-color: #cbd4dd;
+  }
 }
 
 .reference__content {
@@ -14,15 +18,29 @@
   padding: 45px 29px 197px 31px;
   margin: 0 auto;
 
-  @media #{$narrow-tablet} {
+  @media #{$width-666} {
     padding-top: 34px;
     padding-bottom: 330px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+    padding-bottom: 440px;
+    text-align: center;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    max-width: 670px;
   }
 }
 
 .reference__logo {
   width: 180px;
   margin: 0 0 11px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .reference__heading {

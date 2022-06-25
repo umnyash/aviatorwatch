@@ -8,3 +8,29 @@
 .swiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
   background-color: currentColor;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: currentColor;
+}
+
+.swiper-button-prev {
+  @media (min-width: $wide-tablet-width) {
+    left: 15px;
+  }
+}
+
+.swiper-button-next {
+  @media (min-width: $wide-tablet-width) {
+    right: 15px;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 36px;
+
+  @media (min-width: $wide-tablet-width) {
+    font-size: 40px;
+  }
+}

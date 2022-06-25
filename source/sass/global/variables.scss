@@ -1,7 +1,13 @@
 // Viewports
 
 $wide-mobile: "(min-width: 361px) and (max-width: 666px)";
-$narrow-tablet: "(min-width: 666px) and (max-width: 767px)";
+$width-666: "(min-width: 666px) and (max-width: 666px)";
+$wide-mobile-width-666: "(max-width: 666px)";
+$tablet: "(min-width: 667px) and (max-width: 767px)";
+
+$mobile-width-only: 666px;
+$tablet-width: 667px;
+$wide-tablet-width: 768px;
 
 // Fonts
 
@@ -19,4 +25,4 @@ $text-color: #000000;
 $secondary-text-color: #ffffff;
 $swiper-bullets-color: #000000;
 $gift-experience-background-color: #cfd5da;
-$reference-background-color: #bbcedd;
+$border-color: #757575;

@@ -32,8 +32,23 @@
   line-height: 26px;
   font-weight: 400;
   letter-spacing: 0.05em;
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+    margin-top: 7px;
+  }
+}
+
+.gallery .gallery__button {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .gallery .gallery__pagination {
   bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

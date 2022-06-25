@@ -8,4 +8,9 @@
   font-family: $basic-font-family;
   font-size: 16px;
   line-height: 19.5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }

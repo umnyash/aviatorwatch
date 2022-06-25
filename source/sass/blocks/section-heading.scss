@@ -8,6 +8,11 @@
   &--center {
     text-align: center;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
 }
 
 .section-heading__part {
@@ -17,7 +22,14 @@
   line-height: 19.5px;
   letter-spacing: 0;
 
-  @media #{$narrow-tablet} {
+  @media #{$width-666} {
     margin-bottom: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 1px;
+    letter-spacing: 0.03em;
   }
 }
