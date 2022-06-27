@@ -9,6 +9,10 @@
 
 .fade-text__inner {
   margin: 0 0 16px;
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .fade-text__inner p {
@@ -28,14 +32,23 @@
   line-height: 26px;
   background-color: transparent;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 6px;
-    width: 7px;
-    height: 6px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6'%3E%3Cpolygon points='0,0 3.5,6 7,0'/%3E%3C/svg%3E");
+  @media (min-width: $laptop-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.fade-text__button::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 6px;
+  width: 7px;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6'%3E%3Cpolygon points='0,0 3.5,6 7,0'/%3E%3C/svg%3E");
+
+  @media (min-width: $laptop-width) {
+    right: 11px;
   }
 }
 

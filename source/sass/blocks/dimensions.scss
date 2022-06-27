@@ -9,6 +9,14 @@
   @media (min-width: $tablet-width) {
     padding: 35px 0 0;
   }
+
+  @media (min-width: $laptop-width) {
+    padding: 49px 0 0;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding-top: 93px;;
+  }
 }
 
 .dimensions__heading {
@@ -19,6 +27,22 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 66px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-bottom: 95px;
+    font-size: 48px;
+    line-height: 59px;
   }
 }
 

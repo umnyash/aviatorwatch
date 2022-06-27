@@ -32,6 +32,15 @@
   @media (min-width: $wide-tablet-width) {
     max-width: 670px;
   }
+
+  @media (min-width: $laptop-width) {
+    padding: 46px 36px 420px 32px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding-top: 75px;
+    max-width: 1300px;
+  }
 }
 
 .reference__logo {
@@ -41,10 +50,28 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 15px;
   }
+
+  @media (min-width: $laptop-width) {
+    width: 258px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    width: 500px;
+    margin-bottom: 39px;
+  }
 }
 
 .reference__heading {
   margin: 0 0 13px;
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .reference__img-wrapper {

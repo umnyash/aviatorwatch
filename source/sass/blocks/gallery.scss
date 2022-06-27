@@ -37,6 +37,23 @@
     max-width: none;
     margin-top: 7px;
   }
+
+  @media (min-width: $laptop-width) {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    font-size: 72px;
+    line-height: 72px;
+  }
 }
 
 .gallery .gallery__button {

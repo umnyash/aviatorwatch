@@ -9,6 +9,10 @@
   @media (min-width: $wide-tablet-width) {
     padding-bottom: 26px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .features__heading {
@@ -16,6 +20,15 @@
 
   @media(min-width: $tablet-width) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    max-width: 470px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    max-width: 900px;
+    margin-bottom: 48px;
   }
 }
 
@@ -35,6 +48,11 @@
 
   @media (min-width: $wide-tablet-width) {
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $laptop-width) {
+    max-width: none;
+    margin-bottom: 0;
   }
 }
 
@@ -65,9 +83,26 @@
 }
 
 .features__item {
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 138px;
+    padding-bottom: 113px;
+    grid-template-columns: repeat(2, minmax(600px, 720px));
+    justify-content: center;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    padding-top: 90px;
+    padding-bottom: 70px;
+    grid-template-columns: repeat(2, minmax(720px, 1440px));
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding-top: 30px;
   }
 }
 
@@ -105,16 +140,46 @@
     max-width: none;
     padding: 80px 56px 68px 58px;
   }
+
+  @media (min-width: $laptop-width) {
+    padding: 101px 40px 68px 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 65px 140px 0px 146px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    padding: 46px 60px 0px 60px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding: 359px 113px 51px 121px;
+  }
+}
+
+.features__item-inner .fade-text .fade-text__inner {
+  @media (min-width: $laptop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .features__item--figure {
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: block;
     padding: 0 0 6px;
   }
 
   @media (min-width: $wide-tablet-width) {
     padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 86px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    padding-bottom: 39px;
   }
 }
 
@@ -131,11 +196,41 @@
     padding-top: 45px;
     margin-bottom: 8px;
   }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    padding-top: 95px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding-top: 208px;
+    margin-bottom: 0;
+  }
 }
 
 .features__item--figure .features__heading {
   @media(min-width: $tablet-width) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    max-width: none;
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-bottom: 140px;
+    font-size: 96px;
+    line-height: 96px;
   }
 }
 
@@ -147,6 +242,20 @@
 
   @media (min-width: $wide-tablet-width) {
     padding-left: 24px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, minmax(600px, 720px));
+    justify-content: center;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    grid-template-columns: repeat(2, minmax(720px, 1440px));
   }
 }
 
@@ -167,6 +276,30 @@
   @media (min-width: $wide-tablet-width) {
     padding: 57px 9px 28px;
   }
+
+  @media (min-width: $laptop-width) {
+    padding: 43px 0px 28px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 619px;
+    padding-top: 34px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    margin-left: 34px;
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    max-width: none;
+    padding-bottom: 405px;
+    margin-left: 0;
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .features__figcaption-item {
@@ -174,6 +307,14 @@
 
   @media (min-width: $wide-tablet-width) {
     margin-bottom: 13px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-bottom: 21px;
   }
 }
 

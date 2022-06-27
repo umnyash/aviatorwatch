@@ -30,6 +30,29 @@
     padding-right: 59px;
     padding-left: 60px;
   }
+
+  @media (min-width: $laptop-width) {
+    padding: 92px 50px 10px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 166px 59px 10px 61px
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    display: flex;
+    max-width: 720px;
+    padding-top: 142px;
+    margin-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    max-width: 1420px;
+    padding: 86px 129px 10px 201px;
+  }
 }
 
 .gift-experience__item-content p {
@@ -42,6 +65,19 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
   }
+
+  @media (min-width: $laptop-width) {
+    padding: 0 45px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .gift-experience__heading {
@@ -53,6 +89,14 @@
 
   @media (min-width: $wide-tablet-width) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-bottom: 40px;
   }
 }
 
@@ -69,6 +113,31 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 29px;
+  }
+
+  @media (min-width: $laptop-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: 1898px) {
+    min-width: 142px;
+    height: 36px;
+    margin-top: 0;
+    margin-bottom: 107px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    height: 72px;
+    padding-right: 70px;
+    padding-left: 70px;
+    margin-bottom: 88px;
+    font-size: 28px;
+    line-height: 67px;
   }
 }
 
@@ -97,8 +166,30 @@
   @media (max-width: $mobile-width-only) {
     display: none;
   }
+
+  @media (min-width: $desktop-width) {
+    top: 47%;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    top: 50%;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    top: 47%;
+  }
 }
 
 .gift-experience .gift-experience__button--prev {
   color: $secondary-text-color;
+}
+
+.gift-experience .gift-experience__button--next {
+  @media (min-width: $wide-desktop-width) {
+    right: 535px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    right: 1043px;
+  }
 }

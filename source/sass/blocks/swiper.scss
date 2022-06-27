@@ -3,6 +3,12 @@
   margin: 6px;
   background-color: transparent;
   opacity: 1;
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin: 14px;
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .swiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
@@ -18,11 +24,43 @@
   @media (min-width: $wide-tablet-width) {
     left: 15px;
   }
+
+  @media (min-width: $laptop-width) {
+    left: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 51px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    left: 407px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    left: 870px;
+  }
 }
 
 .swiper-button-next {
   @media (min-width: $wide-tablet-width) {
     right: 15px;
+  }
+
+  @media (min-width: $laptop-width) {
+    right: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 51px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    right: 407px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    right: 870px;
   }
 }
 
@@ -32,5 +70,13 @@
 
   @media (min-width: $wide-tablet-width) {
     font-size: 40px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 55px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    font-size: 112px;
   }
 }

@@ -17,6 +17,14 @@
     flex-direction: column;
     align-items: center;
   }
+
+  @media (min-width: $laptop-width) {
+    max-width: 400px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    max-width: none;
+  }
 }
 
 .main-banner__logo {
@@ -36,6 +44,24 @@
   @media (min-width: $wide-tablet-width) {
     margin-bottom: 67px;
   }
+
+  @media (min-width: $laptop-width) {
+    width: 260px;
+    margin-bottom: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    width: 515px;
+    margin-bottom: 90px;
+  }
 }
 
 .main-banner__heading {
@@ -49,12 +75,45 @@
   @media (min-width: $wide-tablet-width) {
     margin-top: 241px;
   }
+
+  @media (min-width: $laptop-width) {
+    margin-top: 303px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 393px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    margin-top: 648px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-top: 1326px;
+    margin-bottom: 46px;
+  }
 }
 
 .main-banner .main-banner__heading {
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    font-size: 96px;
+    line-height: 96px;
   }
 }
 
@@ -68,6 +127,27 @@
   @media (min-width: $tablet-width) {
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-right: 29px;
+    padding-left: 29px;
+  }
+
+  @media (min-width: 1898px) {
+    min-width: 142px;
+    height: 36px;
+    margin-top: 0;
+    margin-bottom: 45px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    height: 72px;
+    padding-right: 70px;
+    padding-left: 70px;
+    font-size: 28px;
+    line-height: 67px;
   }
 }
 
