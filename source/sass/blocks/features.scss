@@ -54,6 +54,14 @@
     max-width: none;
     margin-bottom: 0;
   }
+
+  @media (min-width: $wide-desktop-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding-top: 160px;
+  }
 }
 
 .features__intro .features__img-wrapper {
