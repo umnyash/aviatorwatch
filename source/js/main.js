@@ -1,6 +1,6 @@
 'use strict';
 
-let swiper = new Swiper(".swiper", {
+let swiper = new Swiper(".swiper-1", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
@@ -11,6 +11,37 @@ let swiper = new Swiper(".swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+});
+
+var swiper2 = new Swiper(".swiper-2", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    420: {
+      slidesPerView: 2,
+    },
+    630: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    920: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
   },
 });
 
@@ -29,3 +60,19 @@ for (let button of fadeTextButtons) {
     }
   });
 }
+
+const goodSection = document.querySelector('.good');
+const goodSectionViewToggler = goodSection.querySelector('.good__elements .good__element--jumper');
+
+goodSectionViewToggler.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  if (goodSection.classList.contains('good--lessen')) {
+    goodSection.classList.remove('good--lessen');
+    goodSectionViewToggler.classList.remove('good__element--top');
+    goodSectionViewToggler.classList.add('good__element--bottom');
+  } else {
+    goodSection.classList.add('good--lessen');
+    goodSectionViewToggler.classList.add('good__element--top');
+    goodSectionViewToggler.classList.remove('good__element--bottom');
+  }
+});
