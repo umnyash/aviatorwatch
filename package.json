@@ -31,7 +31,7 @@
     "start": "gulp"
   },
   "browserslist": [
-    "last 2 versions",
+    "last 10 versions",
     "not dead",
     "not ie <= 11"
   ],
