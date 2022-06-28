@@ -1034,13 +1034,8 @@
 }
 @media (min-width: 5120px) {
   .good__buttons-wrapper .good__button {
-    font-size: 28px;
-  }
-}
-@media (min-width: 5120px) {
-  .good__buttons-wrapper .good__button {
-    width: 44px;
     height: 35px;
+    font-size: 28px;
   }
 }
 
