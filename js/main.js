@@ -99,8 +99,10 @@ window.onload = () => {
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        console.log(Math.random());
         slider2WrapperCopy.classList.add('good__slider2-copy-wrapper--hidden');
       } else {
+        console.log(Math.random());
         slider2WrapperCopy.classList.remove('good__slider2-copy-wrapper--hidden');
       }
     })
