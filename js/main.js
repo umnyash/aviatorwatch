@@ -1,5 +1,7 @@
 'use strict';
 
+const SLIDER_2_COPY_ANIMATION_DURATION = 400;
+
 const goodSection = document.querySelector('.good');
 
 const slider2 = goodSection.querySelector('.good__slider2-wrapper');
@@ -7,7 +9,6 @@ const slider2 = goodSection.querySelector('.good__slider2-wrapper');
 const slider2Copy = slider2.cloneNode(true);
 slider2Copy.ariaHidden = 'true';
 slider2Copy.classList.add('good__slider2-wrapper--copy');
-slider2Copy.classList.add('good__slider2-wrapper--hidden');
 
 goodSection.appendChild(slider2Copy);
 
@@ -18,6 +19,7 @@ let swiper0 = new Swiper(".swiper-0", {
   fadeEffect: {
     crossFade: true
   },
+  speed: 400,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -107,9 +109,13 @@ window.onload = () => {
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        slider2Copy.classList.add('good__slider2-wrapper--hidden');
+        slider2Copy.style.opacity = 0;
+        setTimeout(() => {
+          slider2Copy.style.visibility = 'hidden';
+        }, SLIDER_2_COPY_ANIMATION_DURATION);
       } else if (slider2.getBoundingClientRect().y > 0) {
-        slider2Copy.classList.remove('good__slider2-wrapper--hidden');
+        slider2Copy.style.visibility = 'visible';
+        slider2Copy.style.opacity = 1;
       }
     })
   }, { threshold: 0.01 });

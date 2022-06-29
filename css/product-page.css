@@ -1142,15 +1142,12 @@
   right: 0;
   bottom: 0;
   left: 0;
+  transition: opacity 400ms;
 }
 @media (max-width: 1023px) {
   .good .good__slider2-wrapper--copy {
     display: none;
   }
-}
-
-.good .good__slider2-wrapper--hidden {
-  display: none;
 }
 
 .product-characteristics {
@@ -2049,6 +2046,7 @@
   color: transparent;
   background-image: linear-gradient(to top, transparent, #000 2em, #000);
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   background-clip: text;
   overflow: hidden;
 }
