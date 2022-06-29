@@ -156,6 +156,10 @@
   text-decoration: none;
 }
 
+.good__item {
+  background-color: #f2f2f2;
+}
+
 .good__item-content {
   position: relative;
   padding: 23px 0 25px;
@@ -1132,7 +1136,7 @@
   }
 }
 
-.good .good__slider2-copy-wrapper {
+.good .good__slider2-wrapper--copy {
   z-index: 100;
   position: fixed;
   right: 0;
@@ -1140,12 +1144,12 @@
   left: 0;
 }
 @media (max-width: 1023px) {
-  .good .good__slider2-copy-wrapper {
+  .good .good__slider2-wrapper--copy {
     display: none;
   }
 }
 
-.good .good__slider2-copy-wrapper--hidden {
+.good .good__slider2-wrapper--hidden {
   display: none;
 }
 
