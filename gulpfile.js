@@ -176,7 +176,7 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   copy,
-  optimizeImages,
+  copyImages, // вместо optimizeImages, т.к. картинки уже оптимизированы
   gulp.parallel(
     styles,
     html,
