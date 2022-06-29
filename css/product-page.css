@@ -1066,8 +1066,10 @@
   }
 }
 
-.good--lessen .good__slider2-wrapper {
-  display: flex;
+@media (min-width: 667px) {
+  .good--lessen .good__slider2-wrapper {
+    display: flex;
+  }
 }
 
 .good__slider2 {
@@ -1128,6 +1130,23 @@
   .good__slider2-desc {
     display: none;
   }
+}
+
+.good .good__slider2-copy-wrapper {
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@media (max-width: 1023px) {
+  .good .good__slider2-copy-wrapper {
+    display: none;
+  }
+}
+
+.good .good__slider2-copy-wrapper--hidden {
+  display: none;
 }
 
 .product-characteristics {

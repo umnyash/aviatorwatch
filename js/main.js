@@ -1,6 +1,21 @@
 'use strict';
 
-let swiper = new Swiper(".swiper-1", {
+let swiper0 = new Swiper(".swiper-0", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+let swiper1 = new Swiper(".swiper-1", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
@@ -76,3 +91,22 @@ goodSectionViewToggler.addEventListener('click', (evt) => {
     goodSectionViewToggler.classList.remove('good__element--bottom');
   }
 });
+
+window.onload = () => {
+  const slider2Wrapper = document.querySelector('.good__slider2-wrapper');
+  const slider2WrapperCopy = document.querySelector('.good__slider2-copy-wrapper');
+
+  let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log(Math.random());
+        slider2WrapperCopy.classList.add('good__slider2-copy-wrapper--hidden');
+      } else {
+        console.log(Math.random());
+        slider2WrapperCopy.classList.remove('good__slider2-copy-wrapper--hidden');
+      }
+    })
+  }, { threshold: 0.1 })
+
+  observer.observe(slider2Wrapper);
+}
