@@ -993,12 +993,9 @@
   right: 0;
   bottom: 0;
   left: 0;
+  transition: opacity 400ms;
 
   @media (max-width: 1023px) {
     display: none;
   }
-}
-
-.good .good__slider2-wrapper--hidden {
-  display: none;
 }

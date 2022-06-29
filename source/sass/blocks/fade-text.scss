@@ -3,6 +3,7 @@
   color: transparent;
   background-image: linear-gradient(to top, transparent, #000 2em, #000);
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   background-clip: text;
   overflow: hidden;
 }
