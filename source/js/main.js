@@ -1,6 +1,21 @@
 'use strict';
 
-let swiper = new Swiper(".swiper-1", {
+let swiper0 = new Swiper(".swiper-0", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: "fade",
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+let swiper1 = new Swiper(".swiper-1", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
