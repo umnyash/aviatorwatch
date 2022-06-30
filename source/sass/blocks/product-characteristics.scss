@@ -25,12 +25,9 @@
     justify-content: center;
   }
 
-  @media (min-width: $wide-desktop-width) {
-    grid-template-columns: repeat(2, minmax(720px, 1440px));
-  }
-
   @media (min-width: $wide-desktop-2-width) {
     padding-bottom: 102px;
+    grid-template-columns: repeat(2, minmax(720px, 1440px));
     font-size: 36px;
     line-height: 48px;
   }

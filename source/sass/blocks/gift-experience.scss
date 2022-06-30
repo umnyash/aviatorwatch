@@ -80,6 +80,11 @@
   }
 }
 
+.gift-experience .gift-experience__heading {
+  font-family: $alter-font-family;
+  letter-spacing: -0.02em;
+}
+
 .gift-experience__heading {
   margin: 0 0 13px;
 
@@ -182,6 +187,10 @@
 
 .gift-experience .gift-experience__button--prev {
   color: $secondary-text-color;
+
+  @media (min-width: $laptop-width) {
+    color: currentColor;
+  }
 }
 
 .gift-experience .gift-experience__button--next {

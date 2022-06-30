@@ -106,11 +106,11 @@
   @media (min-width: $wide-desktop-width) {
     padding-top: 90px;
     padding-bottom: 70px;
-    grid-template-columns: repeat(2, minmax(720px, 1440px));
   }
 
   @media (min-width: $wide-desktop-2-width) {
     padding-top: 30px;
+    grid-template-columns: repeat(2, minmax(720px, 1440px));
   }
 }
 

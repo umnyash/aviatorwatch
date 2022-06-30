@@ -64,9 +64,10 @@
 .specification__heading {
   margin: 0 0 26px;
   text-align: center;
+  font-family: $accent-font-family;
   font-size: 22px;
   line-height: 27px;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.03em;
 
   @media #{$width-666} {
     margin-bottom: 30px;

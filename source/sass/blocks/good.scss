@@ -126,7 +126,7 @@
 
   @media (min-width: $wide-desktop-2-width) {
     padding-top: 227px;
-    padding-bottom: 62px;
+    padding-bottom: 226px;
   }
 }
 
@@ -281,6 +281,11 @@
     font-size: 14px;
     line-height: 17px;
   }
+
+  @media (min-width: $wide-desktop-2-width) {
+    font-size: 28px;
+    line-height: 34px;
+  }
 }
 
 .good__breadcrumbs-list-item {
@@ -300,6 +305,16 @@
     @media (min-width: $laptop-width) {
       right: -14px;
     }
+
+    @media (min-width: $wide-desktop-2-width) {
+      right: -28px;
+      height: 36px;
+      width: 2px;
+    }
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    margin-right: 46px;
   }
 }
 
@@ -328,10 +343,17 @@
   mask-image: url("../img/icons/star.svg");
   mask-repeat: no-repeat;
   mask-position: center;
+  mask-size: contain;
 
   @media (min-width: $tablet-width) {
     top: 1px;
     right: 30px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    right: 40px;
+    width: 34px;
+    height: 34px;
   }
 }
 
@@ -345,11 +367,18 @@
   mask-image: url("../img/icons/share.svg");
   mask-repeat: no-repeat;
   mask-position: center;
+  mask-size: contain;
 
   @media (min-width: $tablet-width) {
     top: 2px;
     right: 80px;
     left: auto;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    right: 140px;
+    width: 28px;
+    height: 32px;
   }
 }
 
@@ -435,6 +464,11 @@
     position: absolute;
     bottom: 17px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    bottom: 26px;
+    max-width: 3564px;
   }
 }
 
@@ -618,6 +652,13 @@
   height: 7px;
   margin: 0 0 0 6px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 7'%3E%3Cpolygon points='0,0 5,3.5 0,7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $wide-desktop-2-width) {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 .good__element--bottom::after {
@@ -744,7 +785,9 @@
 
 .good__find {
   position: relative;
-  padding: 0 16px 0 0;
+  padding: 0 14px 0 0;
+  text-decoration: none;
+  color: #999999;
 
   @media (min-width: $laptop-width) {
     padding-right: 31px;
@@ -795,11 +838,21 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding: 0 815px;
+    column-gap: 0;
+    background-color: $secondary-text-color;
+  }
 }
 
 .good__elements .good__element {
   padding: 17px 10px 16px;
   background-color: $secondary-text-color;
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding: 34px 20px 33px;
+  }
 }
 
 .good__elements .good__element--jumper {
@@ -836,8 +889,8 @@
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    width: 45px;
-    height: 45px;
+    width: 54px;
+    height: 54px;
   }
 }
 
@@ -852,8 +905,8 @@
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    width: 44px;
-    height: 35px;
+    width: 66px;
+    height: 52px;
   }
 }
 
@@ -868,8 +921,8 @@
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    width: 59px;
-    height: 35px;
+    width: 89px;
+    height: 48px;
   }
 }
 
@@ -884,8 +937,8 @@
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    width: 51px;
-    height: 43px;
+    width: 42px;
+    height: 54px;
   }
 }
 
@@ -925,6 +978,10 @@
   @media (max-width: 1023px) {
     display: none;
   }
+
+  @media (min-width: $laptop-width) {
+    background-color: transparent;
+  }
 }
 
 .good--lessen .good__slider2-wrapper {
@@ -936,6 +993,26 @@
 .good__slider2 {
   margin-top: auto;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.good__slider2 .good__slider2-button--prev {
+  @media (min-width: $wide-desktop-width) {
+    left: 68px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    left: 140px;
+  }
+}
+
+.good__slider2 .good__slider2-button--next {
+  @media (min-width: $wide-desktop-width) {
+    right: 68px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    right: 140px;
+  }
 }
 
 .good__slider2 .good__slider2-pagination {
@@ -975,9 +1052,9 @@
     line-height: 24px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $wide-desktop-2-width) {
     top: 80px;
-    left: 160px;
+    left: 120px;
     font-size: 28px;
     line-height: 28px;
   }
