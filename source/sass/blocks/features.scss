@@ -262,7 +262,7 @@
     justify-content: center;
   }
 
-  @media (min-width: $wide-desktop-width) {
+  @media (min-width: $wide-desktop-2-width) {
     grid-template-columns: repeat(2, minmax(720px, 1440px));
   }
 }
