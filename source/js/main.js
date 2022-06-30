@@ -122,3 +122,11 @@ window.onload = () => {
 
   observer.observe(slider2);
 }
+
+const videosWrappers = document.querySelectorAll('.videos__wrapper');
+
+for (let video of videosWrappers) {
+  video.querySelector('.videos__play-button').addEventListener('click', (evt) => {
+    video.querySelector('.videos__poster-wrapper').remove();
+  });
+}
