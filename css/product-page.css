@@ -2990,7 +2990,7 @@
     justify-content: center;
   }
 }
-@media (min-width: 2560px) {
+@media (min-width: 5120px) {
   .features__item--figure .features__figure {
     grid-template-columns: repeat(2, minmax(720px, 1440px));
   }
