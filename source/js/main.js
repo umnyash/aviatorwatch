@@ -9,6 +9,7 @@ const slider2 = goodSection.querySelector('.good__slider2-wrapper');
 const slider2Copy = slider2.cloneNode(true);
 slider2Copy.ariaHidden = 'true';
 slider2Copy.classList.add('good__slider2-wrapper--copy');
+slider2Copy.style.visibility = 'hidden';
 
 goodSection.appendChild(slider2Copy);
 
