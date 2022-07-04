@@ -149,6 +149,7 @@
 
 .good__price {
   margin: 0;
+  font-family: $alter-font-family;
   font-size: 22px;
   line-height: 27px;
   color: $additional-text-color;
@@ -413,8 +414,9 @@
 
 .good__topbar .good__button-1 {
   height: 30px;
-  line-height: 26px;
   margin: 0 0 0 20px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
 
   @media (min-width: $tablet-width) {
     padding-left: 24px;
@@ -430,6 +432,7 @@
 
 .good__topbar .good__button-2 {
   border-width: 1px;
+  letter-spacing: 0.05em;
 
   @media (min-width: $tablet-width) {
     height: 30px;
@@ -498,6 +501,7 @@
 
 .good__heading {
   margin: 0 0 9px;
+  font-family: $secondary-font-family;
   font-size: 26px;
   line-height: 26px;
   letter-spacing: 0.05em;
@@ -531,6 +535,7 @@
   width: 100%;
   padding: 0 0 10px;
   margin: 0 0 6px;
+  font-family: $alter-font-family;
   font-size: 22px;
   line-height: 27px;
   color: $additional-text-color;
