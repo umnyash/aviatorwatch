@@ -1144,3 +1144,42 @@
     background-color: transparent;
   }
 }
+
+.good__slider2-close {
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  font-size: 17px;
+  text-decoration: none;
+
+  @media (min-width: $laptop-width) {
+    top: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    right: 40px;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    top: 47px;
+    right: 62px;
+    font-size: 28px;
+  }
+}
+
+.good__slider2-close:before {
+  content: "";
+  font-family: 'avia' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

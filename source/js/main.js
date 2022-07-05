@@ -19,6 +19,29 @@ slider2Copy.ariaHidden = 'true';
 slider2Copy.classList.add('good__slider2-wrapper--copy');
 slider2Copy.style.visibility = 'hidden';
 
+const slider2CopyCloseButton = document.createElement('a');
+slider2CopyCloseButton.className = 'good__slider2-close';
+slider2Copy.appendChild(slider2CopyCloseButton);
+
+slider2CopyCloseButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+
+  slider2Copy.style.opacity = 0;
+
+  setTimeout(() => {
+    slider2Copy.style.visibility = 'hidden';
+  }, SLIDER_2_COPY_ANIMATION_DURATION);
+});
+
+const slider2CopyOpenButtons = goodSection.querySelectorAll('.good__element--jumper');
+
+slider2CopyOpenButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    slider2Copy.style.visibility = 'visible';
+    slider2Copy.style.opacity = 1;
+  });
+});
+
 goodSection.appendChild(slider2Copy);
 
 let swiper0 = new Swiper(".swiper-0", {
@@ -129,23 +152,23 @@ goodSectionViewToggler.addEventListener('click', (evt) => {
   }
 });
 
-window.onload = () => {
-  let observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        slider2Copy.style.opacity = 0;
-        setTimeout(() => {
-          slider2Copy.style.visibility = 'hidden';
-        }, SLIDER_2_COPY_ANIMATION_DURATION);
-      } else if (slider2.getBoundingClientRect().y > 0) {
-        slider2Copy.style.visibility = 'visible';
-        slider2Copy.style.opacity = 1;
-      }
-    })
-  }, { threshold: 0.01 });
+// window.onload = () => {
+//   let observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         slider2Copy.style.opacity = 0;
+//         setTimeout(() => {
+//           slider2Copy.style.visibility = 'hidden';
+//         }, SLIDER_2_COPY_ANIMATION_DURATION);
+//       } else if (slider2.getBoundingClientRect().y > 0) {
+//         slider2Copy.style.visibility = 'visible';
+//         slider2Copy.style.opacity = 1;
+//       }
+//     })
+//   }, { threshold: 0.01 });
 
-  observer.observe(slider2);
-}
+//   observer.observe(slider2);
+// }
 
 const videosWrappers = document.querySelectorAll('.videos__wrapper');
 
