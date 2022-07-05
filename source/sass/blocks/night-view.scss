@@ -111,9 +111,9 @@
     display: grid;
     width: 534px;
     margin-bottom: 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 52% 44%;
     column-gap: 20px;
-    padding: 10px 17px 10px 20px;
+    padding: 9px 17px 7px 20px;
     font-size: 16px;
     line-height: 18.5px;
   }
@@ -122,12 +122,14 @@
     width: 750px;
     padding: 8px 24px 13px 26px;
     border-width: 2px;
+    grid-template-columns: 52% 45%;
     font-size: 20px;
     line-height: 26px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 47px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $wide-desktop-width) {

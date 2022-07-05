@@ -1,5 +1,6 @@
 .features__intro {
   display: grid;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -73,8 +74,11 @@
   grid-column: 1 / 2;
 }
 
-.features__img-wrapper {
+.features__img-wrapper figure {
   display: block;
+}
+
+.features__img-wrapper {
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -97,23 +101,32 @@
 .features__item {
   @media (min-width: $tablet-width) {
     display: grid;
+    min-height: 367px;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    min-height: 410px;
+  }
+
+  @media (min-width: $laptop-width) {
+    min-height: 512px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 138px;
-    padding-bottom: 113px;
+    min-height: 720px;
     grid-template-columns: repeat(2, minmax(600px, 720px));
     justify-content: center;
   }
 
   @media (min-width: $wide-desktop-width) {
-    padding-top: 90px;
-    padding-bottom: 70px;
+    // padding-top: 90px;
+    // padding-bottom: 70px;
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    padding-top: 30px;
+    min-height: 1440px;
     grid-template-columns: repeat(2, minmax(720px, 1440px));
   }
 }
@@ -143,36 +156,35 @@
   }
 
   @media(min-width: $tablet-width) {
-    padding-top: 58px;
-    padding-bottom: 68px;
     margin-bottom: 0;
+    padding: 60px 30px 66px 30px;
   }
 
   @media (min-width: $wide-tablet-width) {
     max-width: none;
-    padding: 80px 56px 68px 58px;
+    padding: 77px 58px 83px 58px;
   }
 
   @media (min-width: $laptop-width) {
-    padding: 101px 40px 68px 41px;
+    padding: 72px 40px 58px 41px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 65px 140px 0px 146px;
+    padding: 127px 140px 112px 146px;
   }
 
   @media (min-width: $wide-desktop-width) {
-    padding: 46px 60px 0px 60px;
+    padding: 120px 59px 120px 58px;
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    padding: 359px 113px 51px 121px;
+    padding: 240px 113px 272px 121px;
   }
 }
 
 .features__item-inner .fade-text .fade-text__inner {
   @media (min-width: $laptop-width) {
-    margin-bottom: 18px;
+    margin-bottom: 26px;
   }
 }
 
