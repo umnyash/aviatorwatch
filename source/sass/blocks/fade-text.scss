@@ -6,6 +6,18 @@
   -moz-background-clip: text;
   background-clip: text;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    max-height: 7.4em;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-height: 9.2em;
+  }
+}
+
+.fade-text--lessen-alter .fade-text__inner {
+  max-height: 8.2em;
 }
 
 .fade-text__inner {

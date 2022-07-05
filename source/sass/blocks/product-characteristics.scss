@@ -21,6 +21,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 57px;
     grid-template-columns: repeat(2, minmax(600px, 720px));
     justify-content: center;
   }

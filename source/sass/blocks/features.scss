@@ -11,6 +11,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 39px;
+  }
+
+  @media (min-width: $wide-desktop-width) {
     display: none;
   }
 }
