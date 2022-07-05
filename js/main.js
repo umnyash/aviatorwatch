@@ -2,6 +2,14 @@
 
 const SLIDER_2_COPY_ANIMATION_DURATION = 400;
 
+const FADE_TEXTS_MAX_HEIGHTS = {
+  '0': 131,
+  '667': 133,
+  '1024': 184,
+  '2560': 350,
+  '5120': 650,
+};
+
 const goodSection = document.querySelector('.good');
 
 const slider2 = goodSection.querySelector('.good__slider2-wrapper');
@@ -77,21 +85,36 @@ let swiper2 = new Swiper(".swiper-2", {
   },
 });
 
-const fadeTextButtons = document.querySelectorAll('.fade-text__button');
+const fadeTextsWrappers = document.querySelectorAll('.fade-text');
+let fadeTextsMaxHeight;
 
-for (let button of fadeTextButtons) {
-  button.addEventListener('click', () => {
-    if (button.parentNode.classList.contains('fade-text--lessen')) {
-      button.parentNode.classList.remove('fade-text--lessen');
-      button.textContent = 'Less';
-      button.classList.add('fade-text__button--less');
-    } else {
-      button.parentNode.classList.add('fade-text--lessen');
-      button.textContent = 'More';
-      button.classList.remove('fade-text__button--less');
-    }
-  });
+for (let viewport in FADE_TEXTS_MAX_HEIGHTS) {
+  if (window.innerWidth >= viewport) {
+    fadeTextsMaxHeight = FADE_TEXTS_MAX_HEIGHTS[viewport];
+  }
 }
+
+fadeTextsWrappers.forEach((fadeTextWrapper) => {
+  if (fadeTextWrapper.querySelector('.fade-text__inner').offsetHeight > fadeTextsMaxHeight) {
+    fadeTextWrapper.classList.add('fade-text--lessen');
+
+    const button = fadeTextWrapper.querySelector('.fade-text__button');
+
+    button.style.display = 'inline-block';
+
+    button.addEventListener('click', () => {
+      if (fadeTextWrapper.classList.contains('fade-text--lessen')) {
+        fadeTextWrapper.classList.remove('fade-text--lessen');
+        button.textContent = 'Less';
+        button.classList.add('fade-text__button--less');
+      } else {
+        fadeTextWrapper.classList.add('fade-text--lessen');
+        button.textContent = 'More';
+        button.classList.remove('fade-text__button--less');
+      }
+    });
+  };
+});
 
 const goodSectionViewToggler = goodSection.querySelector('.good__elements .good__element--jumper');
 
