@@ -25,20 +25,6 @@
   position: relative;
 }
 
-.good--lessen {
-  height: 870px;
-  overflow: hidden;
-
-  @media (min-width: $wide-tablet-width) {
-    height: 1125px;
-  }
-
-  @media (min-width: $laptop-width) {
-    height: auto;
-    overflow: auto;
-  }
-}
-
 .good__topbar {
   display: flex;
   padding: 6px 14px;
@@ -882,6 +868,21 @@
   }
 }
 
+.good .good__element--jumper-copy {
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 17px 10px 16px;
+  background-color: $secondary-text-color;
+  transition: opacity 400ms;
+
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+
 .good__element--icon--return::before,
 .good__element--icon--warranty::before,
 .good__element--icon--shipping::before,
@@ -1011,10 +1012,8 @@
   }
 }
 
-.good--lessen .good__slider2-wrapper {
-  @media (min-width: $tablet-width) {
-    display: flex;
-  }
+.good__slider2-wrapper--copy {
+  display: block;
 }
 
 .good__slider2 {
@@ -1023,16 +1022,6 @@
 }
 
 .good__slider2-wrapper .good__slider2-button--prev {
-  @media (min-width: $tablet-width) {
-    top: auto;
-    bottom: 9%;
-  }
-
-  @media (min-width: $wide-tablet-width) {
-    top: auto;
-    bottom: 14%;
-  }
-
   @media (min-width: $laptop-width) {
     top: 50%;
     bottom: auto;
@@ -1048,16 +1037,6 @@
 }
 
 .good__slider2-wrapper .good__slider2-button--next {
-  @media (min-width: $tablet-width) {
-    top: auto;
-    bottom: 9%;
-  }
-
-  @media (min-width: $wide-tablet-width) {
-    top: auto;
-    bottom: 14%;
-  }
-
   @media (min-width: $laptop-width) {
     top: 50%;
     bottom: auto;
@@ -1130,10 +1109,6 @@
   left: 0;
   transition: opacity 400ms;
 
-  @media (max-width: 1023px) {
-    display: none;
-  }
-
   @media (min-width: $laptop-width) {
     background-color: rgba(255, 255, 255, 0.9);
   }
@@ -1146,6 +1121,7 @@
 }
 
 .good__slider2-close {
+  z-index: 2;
   position: absolute;
   right: 18px;
   top: 15px;
@@ -1165,8 +1141,8 @@
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    top: 47px;
-    right: 62px;
+    top: 70px;
+    right: 100px;
     font-size: 28px;
   }
 }
