@@ -58,8 +58,8 @@ let swiper0 = new Swiper(".swiper-0", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-0 .swiper-button-next",
+    prevEl: ".swiper-0 .swiper-button-prev",
   },
 });
 
@@ -72,12 +72,12 @@ let swiper1 = new Swiper(".swiper-1", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-1 .swiper-button-next",
+    prevEl: ".swiper-1 .swiper-button-prev",
   },
 });
 
-let swiper2 = new Swiper(".swiper-2", {
+let swiper2 = new Swiper(".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-2", {
   slidesPerView: 1,
   spaceBetween: 0,
   freeMode: true,
@@ -86,8 +86,39 @@ let swiper2 = new Swiper(".swiper-2", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-button-next",
+    prevEl: ".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-button-prev",
+  },
+  breakpoints: {
+    420: {
+      slidesPerView: 2,
+    },
+    630: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    920: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+let swiper2Copy = new Swiper(".good__slider2-wrapper--copy .swiper-2", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".good__slider2-wrapper--copy .swiper-button-next",
+    prevEl: ".good__slider2-wrapper--copy .swiper-button-prev",
   },
   breakpoints: {
     420: {
