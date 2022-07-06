@@ -12,12 +12,49 @@ const FADE_TEXTS_MAX_HEIGHTS = {
 
 const goodSection = document.querySelector('.good');
 
-const slider2 = goodSection.querySelector('.good__slider2-wrapper');
-
-const slider2Copy = slider2.cloneNode(true);
+const slider2Copy = goodSection.querySelector('.good__slider2-wrapper').cloneNode(true);
 slider2Copy.ariaHidden = 'true';
 slider2Copy.classList.add('good__slider2-wrapper--copy');
 slider2Copy.style.visibility = 'hidden';
+
+const slider2Toggler = goodSection.querySelector('.good__elements .good__element--jumper');
+
+const slider2TogglerCopy = slider2Toggler.cloneNode(true);
+slider2TogglerCopy.classList.add('good__element--jumper-copy');
+slider2TogglerCopy.style.visibility = 'hidden';
+
+goodSection.appendChild(slider2TogglerCopy);
+
+console.log(slider2TogglerCopy);
+console.log(slider2TogglerCopy.offsetHeight);
+
+
+const slider2CopyToggleButtons = goodSection.querySelectorAll('.good__element--jumper');
+
+const hideSlider2Copy = () => {
+  slider2Copy.style.opacity = 0;
+
+  setTimeout(() => {
+    slider2Copy.style.visibility = 'hidden';
+  }, SLIDER_2_COPY_ANIMATION_DURATION);
+};
+
+const toggleSlider2Copy = () => {
+  if (slider2Copy.style.visibility === 'hidden') {
+    slider2Copy.style.visibility = 'visible';
+    slider2Copy.style.opacity = 1;
+  } else {
+    hideSlider2Copy();
+  }
+};
+
+console.log(slider2CopyToggleButtons);
+
+slider2CopyToggleButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    toggleSlider2Copy();
+  });
+});
 
 const slider2CopyCloseButton = document.createElement('a');
 slider2CopyCloseButton.className = 'good__slider2-close';
@@ -25,21 +62,7 @@ slider2Copy.appendChild(slider2CopyCloseButton);
 
 slider2CopyCloseButton.addEventListener('click', (evt) => {
   evt.preventDefault();
-
-  slider2Copy.style.opacity = 0;
-
-  setTimeout(() => {
-    slider2Copy.style.visibility = 'hidden';
-  }, SLIDER_2_COPY_ANIMATION_DURATION);
-});
-
-const slider2CopyOpenButtons = goodSection.querySelectorAll('.good__element--jumper');
-
-slider2CopyOpenButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    slider2Copy.style.visibility = 'visible';
-    slider2Copy.style.opacity = 1;
-  });
+  toggleSlider2Copy();
 });
 
 goodSection.appendChild(slider2Copy);
@@ -58,8 +81,8 @@ let swiper0 = new Swiper(".swiper-0", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-0 .swiper-button-next",
+    prevEl: ".swiper-0 .swiper-button-prev",
   },
 });
 
@@ -72,12 +95,12 @@ let swiper1 = new Swiper(".swiper-1", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-1 .swiper-button-next",
+    prevEl: ".swiper-1 .swiper-button-prev",
   },
 });
 
-let swiper2 = new Swiper(".swiper-2", {
+let swiper2 = new Swiper(".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-2", {
   slidesPerView: 1,
   spaceBetween: 0,
   freeMode: true,
@@ -86,8 +109,39 @@ let swiper2 = new Swiper(".swiper-2", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-button-next",
+    prevEl: ".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-button-prev",
+  },
+  breakpoints: {
+    420: {
+      slidesPerView: 2,
+    },
+    630: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    920: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+let swiper2Copy = new Swiper(".good__slider2-wrapper--copy .swiper-2", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".good__slider2-wrapper--copy .swiper-button-next",
+    prevEl: ".good__slider2-wrapper--copy .swiper-button-prev",
   },
   breakpoints: {
     420: {
@@ -139,36 +193,28 @@ fadeTextsWrappers.forEach((fadeTextWrapper) => {
   };
 });
 
-const goodSectionViewToggler = goodSection.querySelector('.good__elements .good__element--jumper');
+window.onload = () => {
+  let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        slider2TogglerCopy.style.opacity = 0;
+        slider2Copy.style.bottom = '0px';
 
-goodSectionViewToggler.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  if (goodSection.classList.contains('good--lessen')) {
-    goodSection.classList.remove('good--lessen');
-    goodSectionViewToggler.classList.replace('good__element--top', 'good__element--bottom');
-  } else {
-    goodSection.classList.add('good--lessen');
-    goodSectionViewToggler.classList.replace('good__element--bottom', 'good__element--top');
-  }
-});
+        setTimeout(() => {
+          if (slider2Toggler.getBoundingClientRect().y < 0) {
+            slider2TogglerCopy.style.visibility = 'hidden';
+          }
+        }, SLIDER_2_COPY_ANIMATION_DURATION);
+      } else if (slider2Toggler.getBoundingClientRect().y > 0) {
+        slider2TogglerCopy.style.visibility = 'visible';
+        slider2TogglerCopy.style.opacity = 1;
+        slider2Copy.style.bottom = slider2TogglerCopy.offsetHeight + 'px';
+      }
+    })
+  }, { threshold: 0.01 });
 
-// window.onload = () => {
-//   let observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         slider2Copy.style.opacity = 0;
-//         setTimeout(() => {
-//           slider2Copy.style.visibility = 'hidden';
-//         }, SLIDER_2_COPY_ANIMATION_DURATION);
-//       } else if (slider2.getBoundingClientRect().y > 0) {
-//         slider2Copy.style.visibility = 'visible';
-//         slider2Copy.style.opacity = 1;
-//       }
-//     })
-//   }, { threshold: 0.01 });
-
-//   observer.observe(slider2);
-// }
+  observer.observe(slider2Toggler);
+}
 
 const videosWrappers = document.querySelectorAll('.videos__wrapper');
 

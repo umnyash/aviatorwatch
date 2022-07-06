@@ -74,22 +74,6 @@
   position: relative;
 }
 
-.good--lessen {
-  height: 870px;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  .good--lessen {
-    height: 1125px;
-  }
-}
-@media (min-width: 1024px) {
-  .good--lessen {
-    height: auto;
-    overflow: auto;
-  }
-}
-
 .good__topbar {
   display: flex;
   padding: 6px 14px;
@@ -1028,6 +1012,22 @@
   }
 }
 
+.good .good__element--jumper-copy {
+  z-index: 100;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 17px 10px 16px;
+  background-color: #ffffff;
+  transition: opacity 400ms;
+}
+@media (min-width: 1024px) {
+  .good .good__element--jumper-copy {
+    display: none;
+  }
+}
+
 .good__element--icon--return::before,
 .good__element--icon--warranty::before,
 .good__element--icon--shipping::before,
@@ -1172,10 +1172,8 @@
   }
 }
 
-@media (min-width: 667px) {
-  .good--lessen .good__slider2-wrapper {
-    display: flex;
-  }
+.good__slider2-wrapper--copy {
+  display: block;
 }
 
 .good__slider2 {
@@ -1183,18 +1181,6 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-@media (min-width: 667px) {
-  .good__slider2-wrapper .good__slider2-button--prev {
-    top: auto;
-    bottom: 9%;
-  }
-}
-@media (min-width: 768px) {
-  .good__slider2-wrapper .good__slider2-button--prev {
-    top: auto;
-    bottom: 14%;
-  }
-}
 @media (min-width: 1024px) {
   .good__slider2-wrapper .good__slider2-button--prev {
     top: 50%;
@@ -1212,18 +1198,6 @@
   }
 }
 
-@media (min-width: 667px) {
-  .good__slider2-wrapper .good__slider2-button--next {
-    top: auto;
-    bottom: 9%;
-  }
-}
-@media (min-width: 768px) {
-  .good__slider2-wrapper .good__slider2-button--next {
-    top: auto;
-    bottom: 14%;
-  }
-}
 @media (min-width: 1024px) {
   .good__slider2-wrapper .good__slider2-button--next {
     top: 50%;
@@ -1305,11 +1279,6 @@
   left: 0;
   transition: opacity 400ms;
 }
-@media (max-width: 1023px) {
-  .good .good__slider2-wrapper--copy {
-    display: none;
-  }
-}
 @media (min-width: 1024px) {
   .good .good__slider2-wrapper--copy {
     background-color: rgba(255, 255, 255, 0.9);
@@ -1323,6 +1292,7 @@
 }
 
 .good__slider2-close {
+  z-index: 2;
   position: absolute;
   right: 18px;
   top: 15px;
@@ -1346,8 +1316,8 @@
 }
 @media (min-width: 5120px) {
   .good__slider2-close {
-    top: 47px;
-    right: 62px;
+    top: 70px;
+    right: 100px;
     font-size: 28px;
   }
 }
