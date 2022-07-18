@@ -835,6 +835,10 @@
     column-gap: 2px;
   }
 
+  @media (min-width: $laptop-width) {
+    padding-bottom: 2px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -994,9 +998,17 @@
     display: none;
   }
 
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+    background-color: $secondary-text-color;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    padding: 0 60px;
+  }
+
   @media (min-width: $laptop-width) {
     padding: 0 57px;
-    background-color: $secondary-text-color;
   }
 
   @media (min-width: $desktop-width) {
@@ -1021,7 +1033,23 @@
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.good__slider2 .good__slider2-slide {
+  width: auto;
+}
+
+.good__slider2-img-wrapper {
+  display: block;
+}
+
+.good__slider2-img {
+  display: block;
+}
+
 .good__slider2-wrapper .good__slider2-button--prev {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
   @media (min-width: $laptop-width) {
     top: 50%;
     bottom: auto;
@@ -1037,6 +1065,10 @@
 }
 
 .good__slider2-wrapper .good__slider2-button--next {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
   @media (min-width: $laptop-width) {
     top: 50%;
     bottom: auto;
@@ -1109,13 +1141,13 @@
   left: 0;
   transition: opacity 400ms;
 
-  @media (min-width: $laptop-width) {
+  @media (min-width: $tablet-width) {
     background-color: rgba(255, 255, 255, 0.9);
   }
 }
 
 .good__slider2-wrapper--copy .good__slider2 {
-  @media (min-width: $laptop-width) {
+  @media (min-width: $tablet-width) {
     background-color: transparent;
   }
 }
