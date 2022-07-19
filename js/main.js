@@ -25,10 +25,6 @@ slider2TogglerCopy.style.visibility = 'hidden';
 
 goodSection.appendChild(slider2TogglerCopy);
 
-console.log(slider2TogglerCopy);
-console.log(slider2TogglerCopy.offsetHeight);
-
-
 const slider2CopyToggleButtons = goodSection.querySelectorAll('.good__element--jumper');
 
 const hideSlider2Copy = () => {
@@ -47,8 +43,6 @@ const toggleSlider2Copy = () => {
     hideSlider2Copy();
   }
 };
-
-console.log(slider2CopyToggleButtons);
 
 slider2CopyToggleButtons.forEach((button) => {
   button.addEventListener('click', () => {
@@ -101,9 +95,10 @@ let swiper1 = new Swiper(".swiper-1", {
 });
 
 let swiper2 = new Swiper(".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-2", {
-  slidesPerView: 1,
-  spaceBetween: 0,
+  slidesPerView: 'auto',
+  spaceBetween: 14.22,
   freeMode: true,
+  loop: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -113,28 +108,27 @@ let swiper2 = new Swiper(".good__slider2-wrapper:not(.good__slider2-wrapper--cop
     prevEl: ".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-button-prev",
   },
   breakpoints: {
-    420: {
-      slidesPerView: 2,
+    1440: {
+      spaceBetween: 20,
+      loop: false,
     },
-    630: {
-      slidesPerView: 3,
+    2560: {
+      spaceBetween: 35.56,
+      loop: false,
     },
-    768: {
-      slidesPerView: 2,
-    },
-    920: {
-      slidesPerView: 3,
-    },
-    1024: {
-      slidesPerView: 4,
+    5120: {
+      spaceBetween: 71.07,
+      loop: false,
     },
   },
 });
 
 let swiper2Copy = new Swiper(".good__slider2-wrapper--copy .swiper-2", {
-  slidesPerView: 1,
-  spaceBetween: 0,
+  slidesPerView: 'auto',
+  spaceBetween: 56,
   freeMode: true,
+  loop: true,
+  slidesOffsetBefore: 60,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -144,20 +138,34 @@ let swiper2Copy = new Swiper(".good__slider2-wrapper--copy .swiper-2", {
     prevEl: ".good__slider2-wrapper--copy .swiper-button-prev",
   },
   breakpoints: {
-    420: {
-      slidesPerView: 2,
-    },
-    630: {
-      slidesPerView: 3,
+    667: {
+      slidesOffsetBefore: 60,
+      loop: false,
     },
     768: {
-      slidesPerView: 2,
-    },
-    920: {
-      slidesPerView: 3,
+      spaceBetween: 20,
+      slidesOffsetBefore: 28,
+      loop: false,
     },
     1024: {
-      slidesPerView: 4,
+      spaceBetween: 14.22,
+      slidesOffsetBefore: 0,
+      loop: false,
+    },
+    1440: {
+      spaceBetween: 20,
+      slidesOffsetBefore: 0,
+      loop: false,
+    },
+    2560: {
+      spaceBetween: 35.56,
+      slidesOffsetBefore: 0,
+      loop: false,
+    },
+    5120: {
+      spaceBetween: 71.07,
+      slidesOffsetBefore: 0,
+      loop: false,
     },
   },
 });
