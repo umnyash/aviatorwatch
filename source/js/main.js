@@ -96,9 +96,9 @@ let swiper1 = new Swiper(".swiper-1", {
 
 let swiper2 = new Swiper(".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-2", {
   slidesPerView: 'auto',
-  spaceBetween: 20,
+  spaceBetween: 14.22,
   freeMode: true,
-  loop: true,
+  loop: false,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -108,30 +108,27 @@ let swiper2 = new Swiper(".good__slider2-wrapper:not(.good__slider2-wrapper--cop
     prevEl: ".good__slider2-wrapper:not(.good__slider2-wrapper--copy) .swiper-button-prev",
   },
   breakpoints: {
-    667: {
-      loop: false,
-    },
-    1024: {
-      spaceBetween: 14.22,
-    },
     1440: {
       spaceBetween: 20,
+      loop: false,
     },
     2560: {
       spaceBetween: 35.56,
+      loop: false,
     },
     5120: {
       spaceBetween: 71.07,
+      loop: false,
     },
   },
 });
 
 let swiper2Copy = new Swiper(".good__slider2-wrapper--copy .swiper-2", {
   slidesPerView: 'auto',
-  spaceBetween: 20,
+  spaceBetween: 56,
   freeMode: true,
   loop: true,
-  slidesOffsetBefore: 40,
+  slidesOffsetBefore: 60,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -142,20 +139,33 @@ let swiper2Copy = new Swiper(".good__slider2-wrapper--copy .swiper-2", {
   },
   breakpoints: {
     667: {
-      slidesOffsetBefore: 0,
+      slidesOffsetBefore: 60,
+      loop: false,
+    },
+    768: {
+      spaceBetween: 20,
+      slidesOffsetBefore: 28,
       loop: false,
     },
     1024: {
       spaceBetween: 14.22,
+      slidesOffsetBefore: 0,
+      loop: false,
     },
     1440: {
       spaceBetween: 20,
+      slidesOffsetBefore: 0,
+      loop: false,
     },
     2560: {
       spaceBetween: 35.56,
+      slidesOffsetBefore: 0,
+      loop: false,
     },
     5120: {
       spaceBetween: 71.07,
+      slidesOffsetBefore: 0,
+      loop: false,
     },
   },
 });
