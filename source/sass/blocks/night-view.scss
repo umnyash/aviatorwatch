@@ -40,6 +40,10 @@
     margin-bottom: 109px;
   }
 
+  @media (min-width: 2561px) {
+    margin-bottom: calc(218px - (5120px - 100vw) * ((218 - 109) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     margin-bottom: 218px;
   }
@@ -69,6 +73,12 @@
     height: 40px;
   }
 
+  @media (min-width: 2561px) {
+    bottom: calc(-149px - (5120px - 100vw) * ((149 - 77) / 2560));
+    width: calc(100px - (5120px - 100vw) * ((100 - 52) / 2560));
+    height: calc(80px - (5120px - 100vw) * ((80 - 40) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     bottom: -149px;
     width: 100px;
@@ -83,12 +93,15 @@
 
   @media (min-width: $wide-desktop-width) {
     font-size: 48px;
-    line-height: 48px;
+    line-height: 1;
+  }
+
+  @media (min-width: 2561px) {
+    font-size: 1.875vw;
   }
 
   @media (min-width: $wide-desktop-2-width) {
     font-size: 96px;
-    line-height: 96px;
   }
 }
 
@@ -138,6 +151,13 @@
     margin-bottom: 70px;
   }
 
+  @media (min-width: 2561px) {
+    width: calc(1754px - (5120px - 100vw) * ((1754 - 874) / 2560));
+    margin-bottom: calc(187px - (5120px - 100vw) * ((187 - 70) / 2560));
+    font-size: 0.78125vw;
+    line-height: 1.015625vw;
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     width: 1754px;
     padding: 63px 102px 71px 86px;
@@ -178,7 +198,6 @@
   color: $night-view-accent-color;
 }
 
-
 .night-view__key {
   display: inline;
   text-transform: uppercase;
@@ -197,4 +216,29 @@
   vertical-align: middle;
   max-width: 100%;
   height: auto;
+  max-height: 293px;
+
+  @media (min-width: $mobile-width-only) {
+    max-height: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-height: 526px;
+  }
+
+  @media (min-width: 1441px) {
+    max-height: calc(841px - (2560px - 100vw) * ((841 - 526) / 1120));
+  }
+
+  @media (min-width: $wide-desktop-width) {
+    max-height: 841px;
+  }
+
+  @media (min-width: 2561px) {
+    max-height: calc(1682px - (5120px - 100vw) * ((1682 - 841) / 2560));
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    max-height: 1682px;
+  }
 }

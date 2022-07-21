@@ -115,6 +115,11 @@
     height: 154px;
   }
 
+  @media (min-width: 2561px) {
+    width: calc(294px - (5120px - 100vw) * ((294 - 154) / 2560));
+    height: calc(278px - (5120px - 100vw) * ((278 - 154) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     top: 50.7%;
     width: 294px;
@@ -144,6 +149,11 @@
   @media (min-width: $wide-desktop-width) {
     width: 70px;
     height: 64px;
+  }
+
+  @media (min-width: 2561px) {
+    width: calc(153px - (5120px - 100vw) * ((153 - 70) / 2560));
+    height: calc(137px - (5120px - 100vw) * ((137 - 64) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {

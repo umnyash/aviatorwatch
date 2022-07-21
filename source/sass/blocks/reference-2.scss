@@ -10,17 +10,18 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: calc((100% - 1440px) * 154 / 1120) 0;
     grid-template-columns: repeat(2, minmax(600px, 720px));
     justify-content: center;
   }
 
   @media (min-width: $wide-desktop-width) {
-    padding: 154px 0;
+    padding: calc((100% - 2560px) * 154 / 2560 + 154px) 0;
+    grid-template-columns: repeat(2, calc(100% * 720 / 2560));
   }
 
-  @media (min-width: $wide-desktop-2-width) {
-    padding: 308px 0;
-    grid-template-columns: repeat(2, minmax(720px, 1440px));
+  @media (min-width: 5121px) {
+    grid-template-columns: repeat(2, 1440px);
   }
 }
 
@@ -74,6 +75,10 @@
   @media (min-width: $desktop-width) {
     max-width: 560px;
     padding-top: 70px;
+  }
+
+  @media (min-width: 2561px) {
+    max-width: calc((100% - 720px) * 500 / 720 + 560px);
   }
 
   @media (min-width: $wide-desktop-2-width) {
@@ -138,6 +143,7 @@
 }
 
 .reference-2__link {
+  flex-shrink: 0;
   padding-right: 32px;
   padding-left: 32px;
   margin: 0 0 37px;
@@ -172,6 +178,15 @@
     line-height: 32px;
   }
 
+  @media (min-width: 2561px) {
+    height: calc((100% - 646px) * 36 / 720 + 36px);
+    max-height: 72px;
+    padding-right: 7%;
+    padding-left: 7%;
+    font-size: 0.546875vw;
+    line-height: 1.30859375vw;
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     height: 72px;
     padding-right: 70px;
@@ -190,6 +205,14 @@
   vertical-align: middle;
   max-width: 100%;
   height: auto;
+}
+
+.reference-2__buttons-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .reference-2 .reference-2__button {

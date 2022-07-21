@@ -19,6 +19,11 @@
     line-height: 36px;
   }
 
+  @media (min-width: 2561px) {
+    font-size: 1.40625vw;
+    line-height: 1.40625vw;
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     font-size: 72px;
     line-height: 72px;
@@ -51,6 +56,11 @@
 
   @media (min-width: $wide-desktop-width) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: 2561px) {
+    font-size: 0.9375vw;
+    line-height: 1.1328125vw;
   }
 
   @media (min-width: $wide-desktop-2-width) {

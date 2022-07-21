@@ -171,35 +171,48 @@ let swiper2Copy = new Swiper(".good__slider2-wrapper--copy .swiper-2", {
 });
 
 const fadeTextsWrappers = document.querySelectorAll('.fade-text');
-let fadeTextsMaxHeight;
 
-for (let viewport in FADE_TEXTS_MAX_HEIGHTS) {
-  if (window.innerWidth >= viewport) {
-    fadeTextsMaxHeight = FADE_TEXTS_MAX_HEIGHTS[viewport];
+const setFadeText = () => {
+  let fadeTextsMaxHeight;
+
+  for (let viewport in FADE_TEXTS_MAX_HEIGHTS) {
+    if (window.innerWidth >= viewport) {
+      fadeTextsMaxHeight = FADE_TEXTS_MAX_HEIGHTS[viewport];
+    }
   }
+
+  fadeTextsWrappers.forEach((fadeTextWrapper) => {
+    if (fadeTextWrapper.querySelector('.fade-text__inner').offsetHeight > fadeTextsMaxHeight) {
+      fadeTextWrapper.classList.add('fade-text--lessen');
+
+      const button = fadeTextWrapper.querySelector('.fade-text__button');
+
+      button.style.display = 'inline-block';
+
+      button.addEventListener('click', () => {
+        if (fadeTextWrapper.classList.contains('fade-text--lessen')) {
+          fadeTextWrapper.classList.remove('fade-text--lessen');
+          button.textContent = 'Less';
+          button.classList.add('fade-text__button--less');
+        } else {
+          fadeTextWrapper.classList.add('fade-text--lessen');
+          button.textContent = 'More';
+          button.classList.remove('fade-text__button--less');
+        }
+      });
+    } else {
+      fadeTextWrapper.classList.remove('fade-text--lessen');
+
+      const button = fadeTextWrapper.querySelector('.fade-text__button');
+
+      button.style.display = 'none';
+    }
+  });
 }
 
-fadeTextsWrappers.forEach((fadeTextWrapper) => {
-  if (fadeTextWrapper.querySelector('.fade-text__inner').offsetHeight > fadeTextsMaxHeight) {
-    fadeTextWrapper.classList.add('fade-text--lessen');
+// window.addEventListener("resize", setFadeText);
 
-    const button = fadeTextWrapper.querySelector('.fade-text__button');
-
-    button.style.display = 'inline-block';
-
-    button.addEventListener('click', () => {
-      if (fadeTextWrapper.classList.contains('fade-text--lessen')) {
-        fadeTextWrapper.classList.remove('fade-text--lessen');
-        button.textContent = 'Less';
-        button.classList.add('fade-text__button--less');
-      } else {
-        fadeTextWrapper.classList.add('fade-text--lessen');
-        button.textContent = 'More';
-        button.classList.remove('fade-text__button--less');
-      }
-    });
-  };
-});
+// setFadeText();
 
 window.onload = () => {
   let observer = new IntersectionObserver((entries, observer) => {

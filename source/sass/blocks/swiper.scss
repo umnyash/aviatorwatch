@@ -4,10 +4,51 @@
   background-color: transparent;
   opacity: 1;
 
+  @media (min-width: 2880px) {
+    width: 9px;
+    height: 9px;
+  }
+
+  @media (min-width: 3200px) {
+    width: 10px;
+    height: 10px;
+    margin: 7px;
+  }
+
+  @media (min-width: 3520px) {
+    width: 11px;
+    height: 11px;
+  }
+
+  @media (min-width: 3840px) {
+    width: 12px;
+    height: 12px;
+    margin: 8px;
+  }
+
+  @media (min-width: 4160px) {
+    width: 13px;
+    height: 13px;
+    margin: 9px;
+  }
+
+  @media (min-width: 4480px) {
+    width: 14px;
+    height: 14px;
+    margin: 10px;
+  }
+
+  @media (min-width: 4800px) {
+    width: 15px;
+    height: 15px;
+    margin: 11px;
+  }
+
   @media (min-width: $wide-desktop-2-width) {
-    margin: 14px;
+    border-width: 2px;
     width: 16px;
     height: 16px;
+    margin: 12px;
   }
 }
 
@@ -78,6 +119,10 @@
 
   @media (min-width: $laptop-width) {
     font-size: 55px;
+  }
+
+  @media (min-width: 2561px) {
+    font-size: 2.1875vw;
   }
 
   @media (min-width: $wide-desktop-2-width) {
