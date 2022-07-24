@@ -20,7 +20,7 @@
     grid-template-columns: repeat(2, calc(100% * 720 / 2560));
   }
 
-  @media (min-width: 5121px) {
+  @media (min-width: 5120px) {
     grid-template-columns: repeat(2, 1440px);
   }
 }
@@ -78,7 +78,7 @@
   }
 
   @media (min-width: 2561px) {
-    max-width: calc((100% - 720px) * 500 / 720 + 560px);
+    max-width: calc(1060px - (5120px - 100vw) * ((1060 - 560) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
@@ -103,6 +103,10 @@
 
   @media (min-width: $laptop-width) {
     margin-bottom: 22px;
+  }
+
+  @media (min-width: 2561px) {
+    margin-bottom: calc(44px - (5120px - 100vw) * ((44 - 22) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
@@ -135,6 +139,10 @@
 
   @media (min-width: $wide-desktop-width) {
     margin-bottom: 32px;
+  }
+
+  @media (min-width: 2561px) {
+    margin-bottom: calc(60px - (5120px - 100vw) * ((60 - 32) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
@@ -179,10 +187,11 @@
   }
 
   @media (min-width: 2561px) {
-    height: calc((100% - 646px) * 36 / 720 + 36px);
+    height: calc(72px - (5120px - 100vw) * ((72 - 36) / 2560));
     max-height: 72px;
-    padding-right: 7%;
-    padding-left: 7%;
+    padding-right: calc(70px - (5120px - 100vw) * ((70 - 34) / 2560));
+    padding-left: calc(70px - (5120px - 100vw) * ((70 - 34) / 2560));
+    margin-bottom: calc(93px - (5120px - 100vw) * ((93 - 45) / 2560));
     font-size: 0.546875vw;
     line-height: 1.30859375vw;
   }

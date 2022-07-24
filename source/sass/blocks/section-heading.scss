@@ -59,6 +59,7 @@
   }
 
   @media (min-width: 2561px) {
+    margin-bottom: calc(40px - (5120px - 100vw) * ((40 - 20) / 2560));
     font-size: 0.9375vw;
     line-height: 1.1328125vw;
   }

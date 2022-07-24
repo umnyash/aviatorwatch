@@ -1,5 +1,5 @@
 .fade-text--lessen .fade-text__inner {
-  max-height: 131px;
+  // max-height: 131px;
   color: transparent;
   background-image: linear-gradient(to top, transparent, #000 2em, #000);
   -webkit-background-clip: text;
@@ -25,7 +25,7 @@
 }
 
 .fade-text__inner {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 10px;
@@ -51,6 +51,21 @@
     font-size: 20px;
     line-height: 26px;
   }
+
+  @media (min-width: 2561px) {
+    font-size: 0.78125vw;
+    line-height: 1.015625vw;
+  }
+
+  @media (min-width: 2561px) {
+    padding-right: calc(52px - (5120px - 100vw) * ((52 - 26) / 2560));
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    padding-right: 52px;
+    font-size: 40px;
+    line-height: 52px;
+  }
 }
 
 .fade-text__button::after {
@@ -65,8 +80,31 @@
   @media (min-width: $laptop-width) {
     right: 11px;
   }
+
+  @media (min-width: 2561px) {
+    top: calc(24px - (5120px - 100vw) * ((24 - 12) / 2560));
+    width: calc(14px - (5120px - 100vw) * ((14 - 7) / 2560));
+    height: calc(12px - (5120px - 100vw) * ((12 - 6) / 2560));
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    top: 24px;
+    width: 14px;
+    height: 12px;
+  }
 }
 
 .fade-text__button--less::after {
   transform: rotate(180deg);
+}
+
+.fade-text--simple.fade-text--lessen .fade-text__inner {
+  max-height: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.fade-text--simple .fade-text__button {
+  display: inline-block;
 }

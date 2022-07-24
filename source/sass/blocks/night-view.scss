@@ -16,6 +16,10 @@
     padding-top: 118px;
   }
 
+  @media (min-width: 2561px) {
+    padding-top: calc(200px - (5120px - 100vw) * ((200 - 118) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     padding-top: 200px;
   }
@@ -153,7 +157,12 @@
 
   @media (min-width: 2561px) {
     width: calc(1754px - (5120px - 100vw) * ((1754 - 874) / 2560));
+    padding-top: calc(63px - (5120px - 100vw) * ((63 - 28) / 2560));
+    padding-right: calc(102px - (5120px - 100vw) * ((102 - 50) / 2560));
+    padding-bottom: calc(71px - (5120px - 100vw) * ((71 - 38) / 2560));
+    padding-left: calc(86px - (5120px - 100vw) * ((86 - 41) / 2560));
     margin-bottom: calc(187px - (5120px - 100vw) * ((187 - 70) / 2560));
+    border-width: calc(3.5px - (5120px - 100vw) * ((3.5 - 2) / 2560));
     font-size: 0.78125vw;
     line-height: 1.015625vw;
   }

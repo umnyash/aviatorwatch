@@ -14,6 +14,10 @@
     padding: 49px 0 0;
   }
 
+  @media (min-width: 2561px) {
+    padding-top: calc(93px - (5120px - 100vw) * ((93 - 49) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     padding-top: 93px;;
   }
@@ -38,6 +42,12 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 44px;
+  }
+
+  @media (min-width: 2561px) {
+    margin-bottom: calc(95px - (5120px - 100vw) * ((95 - 44) / 2560));
+    font-size: 0.9375vw;
+    line-height: 1.15234375vw;
   }
 
   @media (min-width: $wide-desktop-2-width) {

@@ -94,7 +94,7 @@
   }
 
   @media (min-width: 2561px) {
-    max-width: calc((100% - 720px) * 500 / 720 + 560px);
+    max-width: calc(1060px - (5120px - 100vw) * ((1060 - 560) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
@@ -141,6 +141,7 @@
   }
 
   @media (min-width: 2561px) {
+    margin-bottom: calc(35px - (5120px - 100vw) * ((35 - 13) / 2560));
     font-size: 0.9375vw;
     line-height: 1.1328125vw;
   }
@@ -171,6 +172,10 @@
     margin-bottom: 32px;
   }
 
+  @media (min-width: 2561px) {
+    margin-bottom: calc(57px - (5120px - 100vw) * ((57 - 32) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     margin-bottom: 57px;
   }
@@ -180,31 +185,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // position: relative;
-  // padding: 34px 0 0;
-
-  @media (min-width: $tablet-width) {
-    // padding-top: 43px;
-  }
-
-  @media (min-width: $wide-tablet-width) {
-    // padding-top: 46px;
-  }
-
-  @media (min-width: $laptop-width) {
-    // padding-top: 54px;
-  }
-
-  @media (min-width: $wide-desktop-2-width) {
-    // padding-top: 110px;
-  }
 }
 
 .people__text--decorated::before {
   content: "";
-  // position: absolute;
-  // top: 0;
-  // left: 50%;
   width: 31px;
   height: 22px;
   margin: 0 0 12px;
@@ -212,7 +196,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  // transform: translateX(-50%);
 
   @media (min-width: $tablet-width) {
     width: 39px;
@@ -231,15 +214,14 @@
   }
 
   @media (min-width: 2561px) {
-    width: calc((100vw - 2560px) * 54 / 2056 + 55px);
-    height: 0;
-    padding: 4% 0;
+    width: calc(109px - (5120px - 100vw) * ((109 - 55) / 2560));
+    height: calc(80px - (5120px - 100vw) * ((80 - 39) / 2560));
+    margin-bottom: calc(30px - (5120px - 100vw) * ((30 - 15) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
     width: 109px;
     height: 80px;
-    padding: 0;
     margin-bottom: 30px;
   }
 }
@@ -281,10 +263,11 @@
   }
 
   @media (min-width: 2561px) {
-    height: calc((100% - 646px) * 36 / 720 + 36px);
+    height: calc(72px - (5120px - 100vw) * ((72 - 36) / 2560));
     max-height: 72px;
-    padding-right: 7%;
-    padding-left: 7%;
+    padding-right: calc(70px - (5120px - 100vw) * ((70 - 29) / 2560));
+    padding-left: calc(70px - (5120px - 100vw) * ((70 - 29) / 2560));
+    margin-bottom: calc(90px - (5120px - 100vw) * ((90 - 45) / 2560));
     font-size: 0.546875vw;
     line-height: 1.30859375vw;
   }
@@ -300,7 +283,7 @@
 }
 
 .people__img {
-  vertical-align: middle;
+  display: block;
   max-width: 100%;
   height: auto;
 }

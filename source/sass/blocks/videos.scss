@@ -41,6 +41,11 @@
     padding-left: 640px;
   }
 
+  @media (min-width: 2561px) {
+    padding-bottom: calc(294px - (5120px - 100vw) * ((294 - 113) / 2560));
+    padding-left: calc(1195px - (5120px - 100vw) * ((1195 - 640) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     padding-bottom: 294px;
     padding-left: 1195px;

@@ -4,44 +4,11 @@
   background-color: transparent;
   opacity: 1;
 
-  @media (min-width: 2880px) {
-    width: 9px;
-    height: 9px;
-  }
-
-  @media (min-width: 3200px) {
-    width: 10px;
-    height: 10px;
-    margin: 7px;
-  }
-
-  @media (min-width: 3520px) {
-    width: 11px;
-    height: 11px;
-  }
-
-  @media (min-width: 3840px) {
-    width: 12px;
-    height: 12px;
-    margin: 8px;
-  }
-
-  @media (min-width: 4160px) {
-    width: 13px;
-    height: 13px;
-    margin: 9px;
-  }
-
-  @media (min-width: 4480px) {
-    width: 14px;
-    height: 14px;
-    margin: 10px;
-  }
-
-  @media (min-width: 4800px) {
-    width: 15px;
-    height: 15px;
-    margin: 11px;
+  @media (min-width: 2561px) {
+    border-width: calc(2px - (5120px - 100vw) * ((2 - 1) / 2560));
+    width: calc(16px - (5120px - 100vw) * ((16 - 8) / 2560));
+    height: calc(16px - (5120px - 100vw) * ((16 - 8) / 2560));
+    margin: calc(12px - (5120px - 100vw) * ((12 - 6) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
@@ -82,6 +49,10 @@
     left: 407px;
   }
 
+  @media (min-width: 2561px) {
+    left: calc(870px - (5120px - 100vw) * ((870 - 407) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     left: 870px;
   }
@@ -102,6 +73,10 @@
 
   @media (min-width: $wide-desktop-width) {
     right: 407px;
+  }
+
+  @media (min-width: 2561px) {
+    right: calc(870px - (5120px - 100vw) * ((870 - 407) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
