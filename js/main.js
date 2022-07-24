@@ -214,6 +214,29 @@ const setFadeText = () => {
 
 // setFadeText();
 
+/////////////////// Скрытие/раскрытие текста в блоках features
+
+const featuresfadeTextsWrappers = document.querySelectorAll('.fade-text');
+
+featuresfadeTextsWrappers.forEach((fadeTextWrapper) => {
+
+    const button = fadeTextWrapper.querySelector('.fade-text__button');
+
+    button.addEventListener('click', () => {
+      if (fadeTextWrapper.classList.contains('fade-text--lessen')) {
+        fadeTextWrapper.classList.remove('fade-text--lessen');
+        button.textContent = 'Less';
+        button.classList.add('fade-text__button--less');
+      } else {
+        fadeTextWrapper.classList.add('fade-text--lessen');
+        button.textContent = 'More';
+        button.classList.remove('fade-text__button--less');
+      }
+    });
+  });
+
+//
+
 window.onload = () => {
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
