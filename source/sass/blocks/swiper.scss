@@ -50,11 +50,11 @@
   }
 
   @media (min-width: 2561px) {
-    left: calc(870px - (5120px - 100vw) * ((870 - 407) / 2560));
+    left: calc(828px - (5120px - 100vw) * ((828 - 407) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    left: 870px;
+    left: 828px;
   }
 }
 
@@ -76,11 +76,11 @@
   }
 
   @media (min-width: 2561px) {
-    right: calc(870px - (5120px - 100vw) * ((870 - 407) / 2560));
+    right: calc(835px - (5120px - 100vw) * ((835 - 407) / 2560));
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    right: 870px;
+    right: 835px;
   }
 }
 

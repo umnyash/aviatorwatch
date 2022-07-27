@@ -192,7 +192,7 @@
   width: 31px;
   height: 22px;
   margin: 0 0 12px;
-  background-image: url("../img/quotes.svg");
+  background-image: url("../img/icons/quotes.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -302,23 +302,6 @@
   @media (min-width: $desktop-width) {
     margin-top: 0;
   }
-  // bottom: 18px;
-
-  // @media (min-width: $tablet-width) {
-  //   right: 0;
-  //   bottom: 10px;
-  //   left: auto;
-  //   width: 50%;
-  // }
-
-  // @media (min-width: $wide-tablet-width) {
-  //   bottom: 16px;
-  // }
-
-  // @media (min-width: $laptop-width) {
-  //   position: static;
-  //   width: 100%;
-  // }
 }
 
 .people .people__button {
@@ -341,6 +324,6 @@
   }
 
   @media (min-width: $wide-desktop-2-width) {
-    right: 1043px;
+    right: 1070px;
   }
 }

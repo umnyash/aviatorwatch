@@ -1,27 +1,13 @@
 .fade-text--lessen .fade-text__inner {
-  // max-height: 131px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
   color: transparent;
   background-image: linear-gradient(to top, transparent, #000 2em, #000);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   overflow: hidden;
-
-  @media (min-width: $tablet-width) {
-    max-height: 133px;
-  }
-
-  @media (min-width: $laptop-width) {
-    max-height: 184px;
-  }
-
-  @media (min-width: $wide-desktop-width) {
-    max-height: 350px;
-  }
-
-  @media (min-width: $wide-desktop-2-width) {
-    max-height: 650px;
-  }
 }
 
 .fade-text__inner {
@@ -38,7 +24,7 @@
 
 .fade-text__button {
   position: relative;
-  display: none;
+  display: inline-block;
   padding: 0 26px 0 0;
   border: none;
   font-family: $basic-font-family;
@@ -96,15 +82,4 @@
 
 .fade-text__button--less::after {
   transform: rotate(180deg);
-}
-
-.fade-text--simple.fade-text--lessen .fade-text__inner {
-  max-height: none;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-}
-
-.fade-text--simple .fade-text__button {
-  display: inline-block;
 }

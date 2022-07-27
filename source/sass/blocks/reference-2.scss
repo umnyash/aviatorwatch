@@ -233,7 +233,7 @@
 .reference-2 .reference-2__button--prev {
   color: $secondary-text-color;
 
-  @media (min-width: $wide-desktop-width) {
+  @media (min-width: 1540px) {
     color: $text-color;
   }
 }
