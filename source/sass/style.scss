@@ -2,10 +2,12 @@
 
 @import "global/fonts.scss";
 @import "global/variables.scss";
+@import "global/product-page.scss";
 
 // Blocks
 
 @import "blocks/page.scss";
+@import "blocks/good-bar.scss";
 @import "blocks/good.scss";
 @import "blocks/product-characteristics.scss";
 @import "blocks/specification.scss";

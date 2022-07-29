@@ -1,0 +1,225 @@
+.good-bar {
+  display: none;
+  padding: 6px 14px;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  background-color: $secondary-text-color;
+
+  @media (min-width: $mobile-width-only) {
+    padding: 6px 41px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 6px 12px;
+  }
+
+  @media (min-width: $wide-tablet-width) {
+    padding: 6px 20px;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding: 7px 30px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 68px;
+  }
+
+  @media (min-width: 2561px) {
+    font-size: 0.625vw;
+    line-height: 0.76171875vw;
+  }
+
+  @media (min-width: $wide-desktop-2-width) {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+.is-fixed .good-bar {
+  display: flex;
+  transform: translateY(-1px);
+}
+
+.good-bar__list {
+  display: flex;
+  margin: 0;
+  flex-wrap: wrap;
+  font-family: $alter-font-family;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  list-style: none;
+
+  @media #{$wide-mobile-width-666} {
+    display: none;
+  }
+}
+
+.good-bar__list-item {
+  margin: 3px 29px 3px 0;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 57px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.good-bar__list-link {
+  text-decoration: none;
+}
+
+.good-bar__price {
+  margin: 0 20px 0 0;
+  flex-shrink: 0;
+  font-family: $alter-font-family;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  color: $additional-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+
+  // @media (min-width: $wide-tablet-width) {
+  //   margin: 0 0 6px;
+  // }
+
+  // @media (min-width: $laptop-width) {
+  //   margin-bottom: 3px;
+  // }
+
+  @media (min-width: $laptop-width) {
+    margin-right: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 22px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.good-bar__status {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 12px;
+  margin: 0 auto;
+  flex-shrink: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    @media (min-width: $laptop-width) {
+      width: 9px;
+      height: 9px;
+    }
+  }
+
+  &--available {
+    .good-bar__status-text--not-available,
+    .good-bar__status-text--pre-order {
+      display: none;
+    }
+
+    &::before {
+      background-color: #30ac44;
+    }
+  }
+
+  &--not-available {
+    .good-bar__status-text--available,
+    .good-bar__status-text--pre-order {
+      display: none;
+    }
+
+    &::before {
+      background-color: #f11616;
+    }
+  }
+
+  &--pre-order {
+    .good-bar__status-text--available,
+    .good-bar__status-text--not-available {
+      display: none;
+    }
+
+    &::before {
+      background-color: #f17f16;
+    }
+  }
+
+  @media (min-width: $mobile-width-only) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 2px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $laptop-width) {
+    padding-left: 17px;
+  }
+
+  @media (min-width: $laptop-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.good-bar .good-bar__button-1 {
+  height: 30px;
+  margin: 0 0 0 20px;
+  flex-shrink: 0;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 24px;
+    padding-right: 23px;
+    font-size: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 35px;
+    line-height: 31px;
+  }
+}
+
+.good-bar .good-bar__button-2 {
+  border-width: 1px;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+
+  @media (min-width: $tablet-width) {
+    height: 30px;
+    padding-left: 19px;
+    padding-right: 17px;
+    margin: 0 0 0 22px;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 35px;
+    line-height: 33px;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
