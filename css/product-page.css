@@ -124,11 +124,14 @@
   }
 }
 
-.header--alter .header-mobilemenu-btn {
-  width: 20px;
-  height: 18px;
-  font-size: 24px;
-  overflow: hidden;
+.header--alter .header-mobilemenu-btn:not(.is-active) {
+  width: 19px;
+  height: 17px;
+  font-size: 0;
+  background-image: url("../img/icons/close-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .header--alter:not(.is-fixed) .header-logo {
