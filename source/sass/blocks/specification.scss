@@ -1,6 +1,6 @@
 .specification {
   max-width: 586px;
-  padding: 32px 29px 0 31px;
+  padding: 30px 29px 0 31px;
   margin-left: auto;
 
   @media #{$width-666} {
@@ -9,6 +9,7 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
+    padding-top: 33px;
   }
 
   @media (min-width: $wide-tablet-width) {
@@ -46,7 +47,7 @@
     position: absolute;
     top: 115px;
     right: 0;
-    bottom: 22px;
+    bottom: 6px;
     width: 1px;
     background-color: $border-color;
   }
@@ -77,12 +78,12 @@
   letter-spacing: 0.03em;
 
   @media #{$width-666} {
-    margin-bottom: 30px;
+    margin-bottom: 43px;
     text-align: left;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $wide-tablet-width) {
@@ -134,7 +135,11 @@
 }
 
 .specification__item {
-  padding: 0 0 16px;
+  padding: 0 0 15px;
+
+  @media (min-width: $mobile-width-only) {
+    padding-bottom: 16px;
+  }
 
   @media (min-width: $wide-tablet-width) {
     padding-bottom: 14px;
@@ -171,4 +176,8 @@
 .specification__key {
   font-family: $additional-font-family;
   text-transform: uppercase;
+}
+
+.specification__value {
+  margin: -1px 0 0;
 }

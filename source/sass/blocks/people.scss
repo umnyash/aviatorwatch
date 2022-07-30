@@ -323,6 +323,10 @@
     right: 535px;
   }
 
+  @media (min-width: 2561px) {
+    right: calc(1070px - (5120px - 100vw) * ((1070 - 535) / 2560));
+  }
+
   @media (min-width: $wide-desktop-2-width) {
     right: 1070px;
   }

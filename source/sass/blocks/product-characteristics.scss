@@ -1,13 +1,9 @@
 .product-characteristics {
   display: grid;
-  padding: 0 0 38px;
+  padding: 0 0 31px;
   font-size: 16px;
   line-height: 19.5px;
   background-color: $background-secondary-color;
-
-  @media #{$width-666} {
-    padding-bottom: 31px;
-  }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 32px;
@@ -48,17 +44,17 @@
   justify-self: center;
   padding-right: 18px;
   padding-left: 18px;
-  margin: 37px 0 0;
+  margin: 43px 0 0;
   font-size: 14px;
   letter-spacing: 0.05em;
 
   @media #{$width-666} {
-    margin-top: 33px;
+    margin-top: 34px;
   }
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 3;
-    margin-top: 12px;
+    margin-top: 26px;
   }
 
   @media (min-width: $laptop-width) {

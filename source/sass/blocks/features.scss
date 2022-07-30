@@ -43,6 +43,10 @@
   max-width: none;
   padding: 46px 40px 20px;
 
+  @media (min-width: $wide-tablet-width) {
+    padding-top: 42px;
+  }
+
   @media (min-width: $wide-desktop-width) {
     padding: 80px 100px 20px;
   }
@@ -55,10 +59,6 @@
     padding-top: 160px;
   }
 }
-
-// .features__img-column figure {
-//   display: block;
-// }
 
 .features__img-column {
   display: block;
@@ -74,6 +74,7 @@
   display: block;
   max-width: 100%;
   height: auto;
+  min-height: 275px;
 }
 
 .features__intro .features__img {
@@ -191,6 +192,10 @@
     max-height: 333px;
     object-fit: cover;
     object-position: center top;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1439px) {
+    height: calc(688px - (1440px - 100vw) * ((688 - 432) / 416));
   }
 }
 

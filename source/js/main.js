@@ -224,7 +224,7 @@ if (referenceSection) {
     expandReferenceText();
     referenceButton.style.display = 'none';
 
-    if (referenceText.offsetHeight > window.innerHeight) {
+    if (referenceText.offsetHeight > 0.65 * window.innerHeight) {
       referenceSection.classList.add('reference--compact');
       shrinkReferenceText();
       referenceButton.style.display = 'block';

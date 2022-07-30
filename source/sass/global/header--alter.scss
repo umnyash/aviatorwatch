@@ -26,18 +26,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .header--alter .header-fixed {
   background-color: #f2f2f2;
 }
@@ -84,6 +72,15 @@
   @media (min-width: 2561px) {
     padding: 44px 114px 12px 114px;
   }
+}
+
+.header--alter .header-pr-slide {
+  width: 100%;
+}
+
+.header--alter .header-pr-txt {
+  flex-grow: 1;
+  text-align: center;
 }
 
 .header--alter:not(.is-fixed) .header-actions {
@@ -254,13 +251,17 @@
   }
 }
 
-// .header--alter.is-fixed .header-panel {
-//   margin-left: 12px;
-// }
-
 .header--alter.is-fixed .header-account,
 .header--alter.is-fixed .header-cart {
-  margin-left: 8px;
+  @media (min-width: $tablet-width) and (max-width: $wide-tablet-width) {
+    margin-left: 12px;
+  }
+}
+
+.header--alter.is-fixed .header-panel{
+  @media (min-width: $tablet-width) and (max-width: $wide-tablet-width) {
+    margin-left: 12px;
+  }
 }
 
 .header--alter .header-wishlist {
@@ -307,8 +308,6 @@
     line-height: 29px;
   }
 }
-
-
 
 .header--alter .avia-18 {
   font-size: 19px;
