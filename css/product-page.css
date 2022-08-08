@@ -350,7 +350,6 @@
 
 .header--alter .header-contact-tel {
   padding-left: 23px;
-  font-family: "proximanovasemibold", sans-serif;
 }
 @media (min-width: 1024px) {
   .header--alter .header-contact-tel {
