@@ -3604,6 +3604,11 @@
     min-height: 813px;
   }
 }
+@media (min-width: 769px) {
+  .reference {
+    min-height: calc(1200px - (1024px - 100vw) * 1.51171875);
+  }
+}
 @media (min-width: 1024px) {
   .reference {
     min-height: 1200px;
@@ -3915,6 +3920,11 @@
 @media (min-width: 667px) {
   .reference--compact {
     height: 810px;
+  }
+}
+@media (min-width: 769px) {
+  .reference--compact {
+    min-height: calc(850px - (1024px - 100vw) * 0.15625);
   }
 }
 @media (min-width: 1024px) {
