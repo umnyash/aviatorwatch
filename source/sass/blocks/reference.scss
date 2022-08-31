@@ -14,6 +14,10 @@
     min-height: 813px;
   }
 
+  @media (min-width: 769px) {
+    min-height: calc(1200px - (1024px - 100vw) * ((1200 - 813) / 256));
+  }
+
   @media (min-width: $laptop-width) {
     min-height: 1200px;
   }
@@ -284,6 +288,10 @@
 
   @media (min-width: $tablet-width) {
     height: 810px;
+  }
+
+  @media (min-width: 769px) {
+    min-height: calc(850px - (1024px - 100vw) * ((850 - 810) / 256));
   }
 
   @media (min-width: $laptop-width) {
